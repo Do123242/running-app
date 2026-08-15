@@ -1,0 +1,181 @@
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #F4F7F1;
+  --ink: #16241C;
+  --muted: #66776C;
+  --line: #D8E2D2;
+  --accent: #FF5A36;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.wrap {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 6px;
+}
+
+.question {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.weather-box {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.weather-box.muted {
+  color: var(--muted);
+}
+
+.w-item {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.w-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.course-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff;
+  transition: background .15s ease, transform .1s ease;
+}
+
+.course-card:hover {
+  background: #FFF1EC;
+  transform: translateY(-1px);
+}
+
+.c-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.c-summary {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.c-distance {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.map-frame {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.map-image {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.map-placeholder {
+  border: 1.5px dashed var(--line);
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.map-placeholder p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.map-placeholder .hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.distance-badge {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.steps {
+  padding-left: 20px;
+  margin: 0 0 28px;
+  color: var(--ink);
+  font-size: 14.5px;
+  line-height: 1.9;
+}
+
+.choice-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1.4px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.choice-btn:hover {
+  background: var(--ink);
+  color: #fff;
+}

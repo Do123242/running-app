@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}오늘은 러닝 하는 날{% endblock %}
+{% block content %}
+
+  <p class="eyebrow">TODAY'S RUN</p>
+  <h1>오늘은 러닝 하는 날!</h1>
+
+  {% if weather %}
+    <div class="weather-box">
+      <span class="w-item"><span class="w-label">날씨</span>{{ weather.desc }}</span>
+      <span class="w-item"><span class="w-label">기온</span>{{ weather.temp_c }}°C</span>
+      <span class="w-item"><span class="w-label">강수확률</span>{{ weather.chance_of_rain }}%</span>
+    </div>
+  {% else %}
+    <div class="weather-box muted">날씨 정보를 못 가져왔어요. 그래도 일단 나가자.</div>
+  {% endif %}
+
+  <p class="question">오늘 어디 달릴까?</p>
+
+  <div class="course-grid">
+    {% for key, c in courses.items() %}
+      <a class="course-card" href="{{ url_for('course_detail', course_key=key) }}">
+        <span class="c-name">{{ c.name }}</span>
+        <span class="c-summary">{{ c.summary }}</span>
+        <span class="c-distance mono">{{ c.distance_km }} KM</span>
+      </a>
+    {% endfor %}
+  </div>
+
+{% endblock %}

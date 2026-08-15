@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ course.name }} 러닝 코스{% endblock %}
+{% block content %}
+
+  <p class="eyebrow">RUN COURSE</p>
+  <h1>{{ course.name }}</h1>
+  <p class="question">{{ course.start }} 출발</p>
+
+  <div class="map-frame">
+    {% if image_exists %}
+      <img src="{{ url_for('static', filename='images/' + course.image_file) }}" alt="{{ course.name }} 코스 지도" class="map-image">
+    {% else %}
+      <div class="map-placeholder">
+        <p>아직 지도 이미지가 없어요</p>
+        <p class="hint mono">static/images/{{ course.image_file }}</p>
+        <p class="hint">이 경로에 캡처한 지도 이미지를 저장하면 여기 자동으로 나타나요</p>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="distance-badge mono">{{ course.distance_km }} KM</div>
+
+  <ol class="steps">
+    {% for step in course.steps %}
+      <li>{{ step }}</li>
+    {% endfor %}
+  </ol>
+
+  <a class="choice-btn" href="{{ url_for('index') }}">다른 코스 보기</a>
+
+{% endblock %}
