@@ -17,7 +17,7 @@ COURSES = {
         "distance_km": 8.15,
         "summary": "상계역 출발, 당현천 따라 쭉 내려가서 노원구청 찍고 복귀",
         "steps": ["상계역 출발", "당현천을 따라 남하", "중랑천 합류부에서 노원구청 방면으로 우회전", "노원구청 찍고 유턴", "상계역으로 복귀"],
-        "image_file": "danghyeoncheon.png",
+        "image_file": "danghyeoncheon.jpg",
     },
     "seoulforest": {
         "name": "서울숲",
@@ -25,7 +25,7 @@ COURSES = {
         "distance_km": 8.15,  # 실측 데이터 못 찾아서 우선 예시값. GPX 앱으로 실측하면 여기 숫자만 바꾸면 됨
         "summary": "자양역 CU 앞 출발, 서울숲까지 달려서 한 바퀴 돌고 복귀",
         "steps": ["자양역 CU 편의점 출발", "서울숲 방면으로 진입", "서울숲 둘레 한 바퀴", "왔던 길로 자양역 복귀"],
-        "image_file": "seoulforest.png",
+        "image_file": "seoulforest.jpg",
     },
     "cheonho": {
         "name": "천호대교",
@@ -33,7 +33,7 @@ COURSES = {
         "distance_km": 8.0,
         "summary": "광나루역 출발, 천호대교 찍고 왕복",
         "steps": ["광나루역 출발", "한강변 따라 천호대교 방면 진행", "천호대교 아래에서 턴", "광나루역으로 복귀"],
-        "image_file": "cheonho.png",
+        "image_file": "cheonho.jpg",
     },
 }
 
